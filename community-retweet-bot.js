@@ -2,6 +2,7 @@ var express = require('express'),
     http = require('http'),
     app = express(),
     server = http.Server(app),
+    config = require('./config'),
     Twit = require('twit'),
     tweetQueue = [];
 
@@ -36,15 +37,10 @@ function checkTweetQueue(){
   }, 36000);
 }
 
-var twitter = new Twit({
-  consumer_key: 'LOREM',
-  consumer_secret: 'IPSUM',
-  access_token: 'DOLOR',
-  access_token_secret: 'SIT'
-});
 
 
-var stream = twitter.stream('statuses/filter', { track: [
+var twitter = new Twit(config.twitter),
+    stream = twitter.stream('statuses/filter', { track: [
                                                     '@botwikidotorg'
 //                                                  '#botally'
                                                   ]

@@ -30,9 +30,9 @@ If you're completely new to running Twitter bots, oh well, you will need to be f
 - [gulp.js](http://gulpjs.com/)
 - [Setting up a node.js app on Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-14-04) -- or you can use [OpenShift](https://developers.openshift.com/en/node-js-overview.html), which is free (Digital Ocean starts at $5/month)
 
-After you download this repo, you will just need to run ```sudo npm install``` and then ```gulp``` to get this bot running locally. Refer to the tutorials above to learn how to run it on a server.
+After you download this repo, first rename the file ```config-example.js``` to ```config.js``` and put your  [Twitter API keys/secrets](https://apps.twitter.com/) here.
 
-And of course, don't forget to update ```community-retweet-bot.js``` with your API keys/secrets (see around line 39). 
+After this, you will just need to run ```sudo npm install``` and then ```gulp``` to get this bot running locally. Refer to the tutorials above to learn how to run it on a server.
 
 I created this bot mainly for people who have basic experience with the things mentioned above, so don't hesitate to reach out to me via [email](mailto:stefan@fourtonfish.com) or [Twitter](https://twitter.com/fourtonfish) if you have any questions that I can help you with.
 
